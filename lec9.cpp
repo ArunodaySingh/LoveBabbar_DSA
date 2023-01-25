@@ -2,10 +2,17 @@
 using namespace std;
 int main()
 {
-    int num[5]={ [0 ... 4 ] = 3 }; 
-    for(int i=0;i<4;i++)
-    {
-        cout<<num[i]<<endl;
-    }
+ int arr[6]={1,2,3,4,5,6};
+ int temp;
+ for(int i=0;i<5;i+2)
+ {
+    temp=arr[i];
+    arr[i]=arr[i+1];
+    arr[i+1]=temp;
+ }
+ for(int i=0;i<5;i++)
+ {
+    cout<<arr[i]<<endl;
+ }
  return 0;
 }
