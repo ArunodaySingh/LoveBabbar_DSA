@@ -15,7 +15,7 @@ using namespace std;
 class Queue
 {
 public:
-    int font ;
+    int front ;
     int rear ;
     int data;
     int size;
@@ -24,7 +24,7 @@ public:
     {
         arr = new int[n];
         size = n;
-        font=0;
+        front=0;
         rear=0;
     }
     void push(int data);
@@ -49,26 +49,26 @@ void Queue::push(int data)
 //pop element
 void Queue::pop()
 {
-    if (rear==font)
+    if (rear==front)
     {
         cout << "Underflow Queue " << endl;
         rear=0;
-        font=0;
+        front=0;
         return;
     }
-    arr[font]=-1;
-    font++;
+    arr[front]=-1;
+    front++;
 }
 bool Queue::isEmpty()
 {
-    return (font==rear)?true:false;
+    return (front==rear)?true:false;
 }
 
 
 // traverse element
 void Queue::traverse()
 {
-    for (int i = rear-1 ; i >= font; i--)
+    for (int i = rear-1 ; i >= front; i--)
     {
         cout << arr[i] << " ";
     }
@@ -86,21 +86,21 @@ int main()
     obj.traverse();
     cout<<"...................."<<endl;
     obj.pop();
-    obj.pop();
-     obj.pop();
-    obj.pop();
-     obj.pop();
-    obj.pop();
+    // obj.pop();
+    //  obj.pop();
+    // obj.pop();
+    //  obj.pop();
+    // obj.pop();
     obj.traverse();
-    cout<<obj.isEmpty()<<endl;
-    obj.push(1);
-    obj.push(2);
-    obj.push(3);
-    obj.push(4);
-    obj.push(5);
-    obj.push(6);
-    cout<<obj.isEmpty()<<endl;
-    obj.traverse();
+    // cout<<obj.isEmpty()<<endl;
+    // obj.push(1);
+    // obj.push(2);
+    // obj.push(3);
+    // obj.push(4);
+    // obj.push(5);
+    // obj.push(6);
+    // cout<<obj.isEmpty()<<endl;
+    // obj.traverse();
 
     return 0;
 }
