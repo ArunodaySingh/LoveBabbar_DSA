@@ -80,7 +80,7 @@ bool Stack::isEmpty()
 
 void Stack::traverse()
 {
-    for (int i = 0; i <= top; i++)
+    for (int i = top; i > -1 ; i--)
     {
        cout<<arr[i]<<" ";
     }

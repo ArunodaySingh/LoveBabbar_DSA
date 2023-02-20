@@ -20,7 +20,7 @@ public:
 // Creation of the Heap function
 void heap::insert(int data)
 {
-    size=size+1;
+    size = size + 1;
     int index = size;
     arr[index] = data;
 
@@ -34,47 +34,47 @@ void heap::insert(int data)
         }
         else
         {
-            
+
             return;
         }
     }
-    
 }
 
 // Delete node
 
 void heap::deleteheap()
 {
-    int i=1;
-    if(size==0)
+    int i = 1;
+    if (size == 0)
     {
-        cout<<"Heap is Empty \n";
+        cout << "Heap is Empty \n";
         return;
     }
-    arr[1]=arr[size];
+    arr[1] = arr[size];
     size--;
-    while(i<size)
+    while (i < size)
     {
-    int leftIndex=2*i;
-    int rightIndex=2*i+1;
-    if(leftIndex<=size && arr[leftIndex] > arr[i])
-    {
-        swap(arr[leftIndex],arr[i]);
-        i=leftIndex;
+        int leftIndex = 2 * i;
+        int rightIndex = 2 * i + 1;
+        if (leftIndex <= size && arr[leftIndex] > arr[i])
+        {
+            swap(arr[leftIndex], arr[i]);
+            i = leftIndex;
+        }
+        else if (rightIndex <= size && arr[rightIndex] > arr[i])
+        {
+            swap(arr[rightIndex], arr[i]);
+            i = rightIndex;
+        }
+        else
+        {
+            return;
+        }
     }
-    else if(rightIndex <=size && arr[rightIndex] > arr[i])
-    {
-        swap(arr[rightIndex],arr[i]);
-        i=rightIndex;
-    }
-    else{
-        return;
-    }
-    }
-
-
-    
 }
+
+// Heapify Algorithm
+
 
 // Traversing the Heap
 void heap::print()
