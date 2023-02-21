@@ -103,6 +103,5 @@ int main()
  obj.traverse();
  obj.pop();
  obj.traverse();
-
  return 0;
 }
