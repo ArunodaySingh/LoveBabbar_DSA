@@ -226,20 +226,20 @@ int main()
     Tree *root1 = NULL;
     Tree *pre = NULL;
     root1 = takeInput(root);
-    traverse(root1);   // using level order traversal
-    Intraverse(root1); // inorder traversal
-    cout << "\n  Enter the data which you want to search \n";
-    int n;
-    cin >> n;
-    cout << search(root1, n) << endl;
-    cout << " Enter the data which you want to delete \n";
-    cin >> n;
-    deleteEle(root1, n);
-    traverse(root1);
-    cout << " Enter the data which successor you want \n";
-    cin>>n;
-    InorderSuc(root1, n);
-    InorderPre(root1, n);
+    traverse(root1); // using level order traversal
+    // Intraverse(root1); // inorder traversal
+    // cout << "\n  Enter the data which you want to search \n";
+    // int n;
+    // cin >> n;
+    // cout << search(root1, n) << endl;
+    // cout << " Enter the data which you want to delete \n";
+    // cin >> n;
+    // deleteEle(root1, n);
+    // traverse(root1);
+    // cout << " Enter the data which successor you want \n";
+    // cin >> n;
+    // InorderSuc(root1, n);
+    // InorderPre(root1, n);
 
     return 0;
 }

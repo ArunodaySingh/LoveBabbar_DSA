@@ -75,7 +75,6 @@ void heap::deleteheap()
 
 // Heapify Algorithm
 
-
 // Traversing the Heap
 void heap::print()
 {

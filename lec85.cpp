@@ -9,7 +9,7 @@ public:
     vector<vector<int>> v1;
     graph()
     {
-        v1 = vector<vector<int>>(5);  // initialize inside a constructor it's doesnt work without constructor
+        v1 = vector<vector<int>>(5); // initialize inside a constructor it's doesnt work without constructor
     }
 
     void insertadj()
@@ -19,7 +19,6 @@ public:
         cout << "Enter the nodes \n";
         for (int i = 0; i < 6; i++)
         {
-
             int u, v;
             cin >> u >> v;
             p[u].push_back(v);
@@ -36,16 +35,15 @@ public:
     }
     void print()
     {
-       for(int i=0;i<v1.size();i++)
-       {
-         cout<<v1[i][0]<<"-> ";
-        for(int j=1;j<v1[i].size();j++)
+        for (int i = 0; i < v1.size(); i++)
         {
-             cout<<v1[i][j]<<" ";
+            cout << v1[i][0] << "-> ";
+            for (int j = 1; j < v1[i].size(); j++)
+            {
+                cout << v1[i][j] << " ";
+            }
+            cout << endl;
         }
-        cout<<endl;
-       }
-     
     }
 };
 
