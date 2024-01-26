@@ -11,7 +11,7 @@ using namespace std;
 class Solution
 {
 public:
-    int search(int arr[], int l, int h)
+    int pivot(int arr[], int l, int h)
     {
         int s = l;
         int e = h;
@@ -19,30 +19,39 @@ public:
         int mid = s + (e - s) / 2;
         while (s < e)
         {
-            if (arr[mid] > arr[0])
+            if (arr[mid] >= arr[0])
             {
                 s = mid + 1;
             }
             else
             {
-                e = mid;
+                e = mid - 1;
             }
             mid = s + (e - s) / 2;
         }
         return s;
+    }
+
+    int search(int arr[], int s, int e, int k)
+    {
+        int pivotindex = pivot(arr, s, e);
+        if (arr[0] <= k <= arr[pivotindex])
+        {
+            return binary_search(arr[0], arr[pivotindex], k);
+        }
+        else if (arr[pivotindex + 1] <= k <= arr[e])
+        {
+            return binary_search(arr[pivotindex + 1], arr[e], k);
+        }
     }
 };
 
 //{ Driver Code Starts.
 int main()
 {
-
-    int n;
-    cin >> n;
-    int A[n];
-    for (int i = 0; i < n; i++)
-        cin >> A[i];
+    int n, k = 2;
+    int arr[] = {7, 9, 1, 2, 3};
     Solution ob;
-    cout << ob.search(A, 0, n - 1) << endl;
+    cout << ob.search(arr, 0, n - 1, k) << endl;
 }
 // } Driver Code Ends

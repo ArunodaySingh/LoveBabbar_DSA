@@ -51,7 +51,6 @@ void Queue::pop()
     front=front->next;
     temp->next=NULL;
     delete temp;
-
 }
 
 // Traverse a Queue

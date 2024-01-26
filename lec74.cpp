@@ -56,16 +56,17 @@ void heap::deleteheap()
     {
         int leftIndex = 2 * i;
         int rightIndex = 2 * i + 1;
+        int largest=i;
         if (leftIndex <= size && arr[leftIndex] > arr[i])
         {
-            swap(arr[leftIndex], arr[i]);
-            i = leftIndex;
+            largest = leftIndex;
         }
-        else if (rightIndex <= size && arr[rightIndex] > arr[i])
+        if (rightIndex <= size && arr[rightIndex] > arr[i])
         {
-            swap(arr[rightIndex], arr[i]);
-            i = rightIndex;
+           
+            largest  = rightIndex;
         }
+if(largest!=i) swap(arr[leftIndex], arr[i]);
         else
         {
             return;

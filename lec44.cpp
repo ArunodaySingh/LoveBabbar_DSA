@@ -12,7 +12,6 @@ public:
         temp->data = data;
         if (Head == 0)
         {
-
             Head = temp;
             Next = Head;
             temp->Next = NULL;
@@ -92,7 +91,7 @@ public:
 
 int main()
 {
-    Linked *Obj = new Linked();
+    Linked *Obj ;
     Obj->Insert_data(1);
     Obj->Insert_data(2);
     Obj->Insert_data(3);

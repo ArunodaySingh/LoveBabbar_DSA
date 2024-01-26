@@ -17,7 +17,7 @@ public:
         // undirected graph -> 0
         // directed graph ->
         cout << "Enter the nodes \n";
-        for (int i = 0; i < 6; i++)
+        for (int i = 0; i < 5; i++)
         {
             int u, v;
             cin >> u >> v;

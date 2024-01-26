@@ -25,11 +25,11 @@ Tree *buildingTree(Tree *root)
     {
         return NULL;
     }
-    root = new Tree(n); //It's alloted node a address
+    root = new Tree(n); // It's alloted node a address
     cout << "Enter the left node of the node which have data " << root->data << endl;
-    
+
     root->left = buildingTree(root->left);
-    cout<<root->left<<endl;
+    cout << root->left << endl;
     cout << "Enter the right node of the node which have data " << root->data << endl;
     // cout<<root->right<<endl;
     root->right = buildingTree(root->right);
@@ -38,7 +38,6 @@ Tree *buildingTree(Tree *root)
 // traverse in preorder
 void traverse(Tree *root)
 {
-    
     cout << root->data << " ";
     if (root->left != NULL && root->right == NULL)
     {
@@ -67,7 +66,7 @@ void inTraverse(Tree *root)
         return;
     }
     inTraverse(root->left);
-    
+
     cout << root->data << " ";
     inTraverse(root->right);
 }
@@ -107,18 +106,18 @@ void level_order(Tree *root)
     }
 }
 // Delete elemeent in the BT tree
-void deletenode(Tree *root,int ele)
+void deletenode(Tree *root, int ele)
 {
-    if(root==NULL) return;
-    if(root->data==ele)
+    if (root == NULL)
+        return;
+    if (root->data == ele)
     {
-        Tree *temp=new Tree();
-        temp=root;
+        Tree *temp = new Tree();
+        temp = root;
     }
-    deletenode(root->left,ele);
-    deletenode(root->right,ele);
+    deletenode(root->left, ele);
+    deletenode(root->right, ele);
 }
-
 
 int main()
 {
